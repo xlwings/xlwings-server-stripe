@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: xlwings-remote-stripe
+    env: docker
+    region: ohio
+    plan: free
+    envVars:
+      - key: GOOGLE_ALLOWED_DOMAINS
+        sync: false
+      - key: XLWINGS_LICENSE_KEY
+        sync: false
+      - key: STRIPE_API_KEY
+        sync: false
+      - key: XLWINGS_API_KEY
+        generateValue: true
